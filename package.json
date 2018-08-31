@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/jcalhoon21/Portfolio/issues"
   },
-  "homepage": "https://github.com/jcalhoon21/Portfolio#readme"
+  "homepage": "https://github.com/jcalhoon21/Portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
 }
