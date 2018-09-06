@@ -1,6 +1,8 @@
 const express = require('express'); //565.6k (gzipped: 165.2k)
 const morgan = require('morgan'); // 38.k (gzipped: 12.6K)
 const bodyParser = require('body-parser'); // 747.5k (gzipped: 256.1K)
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const app = express();
 var profile = require('./profile')
@@ -29,11 +31,35 @@ app.get('/contact', (req, res) => {
     res.render('contact');
   });
 
-app.post('/thanks', (req, res) => {
-res.render('thanks', { contact: req.body })
-});
+  app.post('/thanks', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const msg = {
+        to: 'test@example.com',
+        from: 'test@example.com',
+        subject: 'Sending with SendGrid is Fun',
+        text: 'and easy to do anywhere, even with Node.js',
+        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+      };
+      sgMail.send(msg);
+    //   .then(() => {
+    //     return console.log('It worked!');
+    //   })
+    //   .catch(error => {
+    //     //Log friendly error
+    //     return console.error(error.toString());
+  
+    //     //Extract error msg
+    //     const { message, code, response } = error;
+  
+    //     //Extract response msg
+    //     const { headers, body } = response;
+    //   });
+  
+    res.render('thanks', { contact: req.body });
+  });
 
 
 app.listen(8080, () => {
-    console.log('listening at http://localhost:8080');
+console.log('listening at http://localhost:8080');
 });

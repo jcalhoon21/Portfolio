@@ -1,0 +1,77 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 2px;
+    background-color: #333;
+    color: #fff;
+    padding: 1% 2%;
+    font-size: 18px;
+    border: 0;
+}
+
+.navbar-brand {
+    float: left;
+    min-height: 55px;
+    padding: 20px;
+}
+
+.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+
+.btn {
+    font-size: 18px;
+    color: #fff;
+    padding: 15px;
+    background: #333;
+    border: 2px solid #f4f4f4;
+}
+
+.container {
+    margin: 4% auto;
+}
+
+#icon {
+    max-width: 200px;
+    margin: 1% auto;
+}
+
+footer {
+    width: 100%;
+    background: #333;
+    padding: 2%;
+    color: #fff;
+}
+
+.fa {
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.fa:hover {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+    .btn {
+        display: none;
+    }
+
+    #icon {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+}

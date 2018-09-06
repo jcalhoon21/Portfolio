@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jcalhoon21/Portfolio#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "body-parser": "^1.18.3",
     "bootstrap": "^3.3.7",
     "ejs": "^2.6.1",
