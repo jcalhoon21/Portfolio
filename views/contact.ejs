@@ -1,24 +1,63 @@
-<html>
-  <head>
-    <title>JC - Contact</title>
-  </head>
-  <body>
-    <div>
-      <form action="/thanks" method="POST">
-        <label for="firstName">First Name:</label>
-        <input id="firstName" name="firstName" type="text">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jen Calhoon Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 
-        <label for="lastName">Last Name:</label>
-        <input id="lastName" name="lastName" type="text">
+    <!-- START NAV -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">JEN CALHOON</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a class="nav-link js-scroll-trigger" href="/#projects">Projects</a></li>
+                    <li><a class="nav-link js-scroll-trigger" href="/#about">About</a></li>
+                    <li><a class="nav-link js-scroll-trigger" href="contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAV -->
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+          <!--Blank-->
+      </div>
+      <div class="form-group col-sm-4">
+        <form action="/thanks" method="POST">
+          <label for="firstName">First Name:</label>
+          <input id="firstName" class="form-control" name="firstName" type="text">
 
-        <label for="email">Email:</label>
-        <input id="email" name="email" type="text">
+          <label for="lastName">Last Name:</label>
+          <input id="lastName" class="form-control" name="lastName" type="text">
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" type="text"></textarea>
+          <label for="email">Email:</label>
+          <input id="email" class="form-control" name="email" type="text">
 
-        <button type="submit">Submit</button>
-      </form>
+          <label for="message">Message:</label>
+          <textarea id="message" class="form-control" name="message" type="text"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <!--Blank-->
+      </div>
+      </div>   
     </div>
   </body>
 </html>
