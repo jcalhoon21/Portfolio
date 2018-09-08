@@ -42,6 +42,19 @@
     margin: 1% auto;
 }
 
+section {
+    padding: 50px 0;
+}
+
+.form-group {
+    padding: 10px 0px;
+    display: block !important;
+}
+
+.form-control {
+    width: 350px !important;
+}
+
 footer {
     width: 100%;
     background: #333;

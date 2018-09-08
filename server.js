@@ -13,6 +13,7 @@ var profile = require('./profile')
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static('public'))
 
 app.use('/profile', profile)
 
@@ -42,19 +43,6 @@ app.get('/contact', (req, res) => {
         html: '<strong>and easy to do anywhere, even with Node.js</strong>',
       };
       sgMail.send(msg);
-    //   .then(() => {
-    //     return console.log('It worked!');
-    //   })
-    //   .catch(error => {
-    //     //Log friendly error
-    //     return console.error(error.toString());
-  
-    //     //Extract error msg
-    //     const { message, code, response } = error;
-  
-    //     //Extract response msg
-    //     const { headers, body } = response;
-    //   });
   
     res.render('thanks', { contact: req.body });
   });
